@@ -7,9 +7,9 @@ export const config = {
 };
 
 export default async function incr(req: NextRequest): Promise<NextResponse> {
-	// if (req.method !== "POST") {
-	// 	return new NextResponse("use POST", { status: 405 });
-	// }
+	if (req.method !== "POST") {
+		return new NextResponse("use POST", { status: 405 });
+	}
 	if (req.headers.get("Content-Type") !== "application/json") {
 		return new NextResponse("must be json", { status: 400 });
 	}
@@ -18,13 +18,11 @@ export default async function incr(req: NextRequest): Promise<NextResponse> {
 	let slug: string | undefined = undefined;
 	if ("slug" in body) {
 		slug = body.slug;
-		console.log("slug:", body.slug); //debug
 	}
 	if (!slug) {
 		return new NextResponse("Slug not found", { status: 400 });
 	}
 	const ip = req.ip;
-	console.log("ip:", req.ip); //debug
 	if (ip) {
 		// Hash the IP in order to not store it directly in your db.
 		const buf = await crypto.subtle.digest(
@@ -44,8 +42,6 @@ export default async function incr(req: NextRequest): Promise<NextResponse> {
 			new NextResponse(null, { status: 202 });
 		}
 	}
-	console.log("slug:", slug); //debug
 	await redis.incr(["pageviews", "posts", slug].join(":"));
-	console.log("redis:", redis); //debug
 	return new NextResponse(null, { status: 202 });
 }
