@@ -20,16 +20,16 @@ export default async function ProjectsPage() {
 		return acc;
 	}, {} as Record<string, number>);
 
-	const featured = allProjects.find((project) => project.slug === "unkey")!;
-	const top2 = allProjects.find((project) => project.slug === "planetfall")!;
-	const top3 = allProjects.find((project) => project.slug === "highstorm")!;
+	const featured = allProjects.find((project) => project.slug === "testPost")!;
+	// const top2 = allProjects.find((project) => project.slug === "planetfall")!;
+	// const top3 = allProjects.find((project) => project.slug === "highstorm")!;
 	const sorted = allProjects
 		.filter((p) => p.published)
 		.filter(
 			(project) =>
-				project.slug !== featured.slug &&
-				project.slug !== top2.slug &&
-				project.slug !== top3.slug,
+				project.slug !== featured.slug 
+				// project.slug !== top2.slug &&
+				// project.slug !== top3.slug,
 		)
 		.sort(
 			(a, b) =>
@@ -93,13 +93,13 @@ export default async function ProjectsPage() {
 						</Link>
 					</Card>
 
-					<div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
+					{/* <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
 						{[top2, top3].map((project) => (
 							<Card key={project.slug}>
 								<Article project={project} views={views[project.slug] ?? 0} />
 							</Card>
 						))}
-					</div>
+					</div> */}
 				</div>
 				<div className="hidden w-full h-px md:block bg-zinc-800" />
 
