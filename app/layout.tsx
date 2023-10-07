@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 		default: "volunteer-network.com",
 		template: "%s | volunteer-network.com",
 	},
-	description: "Non Profitable Organization at Hiroshima Prefecture",
+	description: "Non Profit Organization at Hiroshima Prefecture",
 	openGraph: {
 		title: "volunteer-network.com",
 		description:
-			"Non Profitable Organization at Hiroshima Prefecture",
+			"Non Profit Organization at Hiroshima Prefecture",
 		url: "https://volunteer-network.com",
 		siteName: "volunteer-network.com",
 		locale: "en-US",
