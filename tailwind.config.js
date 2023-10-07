@@ -120,7 +120,7 @@ module.exports = {
 				},
 			},
 			animation: {
-				typing: "typing 2s steps(18), blink .7s  forwards"
+				typing: "typing 2s steps(18), blink 1s infinite"
 			}
 		},
 	},
