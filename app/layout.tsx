@@ -6,23 +6,16 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
 	title: {
-		default: "chronark.com",
-		template: "%s | chronark.com",
+		default: "volunteer-network.com",
+		template: "%s | volunteer-network.com",
 	},
-	description: "Software engineer at upstash.com and founder of planetfall.io",
+	description: "Non Profitable Organization at Hiroshima Prefecture",
 	openGraph: {
-		title: "chronark.com",
+		title: "volunteer-network.com",
 		description:
-			"Software engineer at upstash.com and founder of planetfall.io",
-		url: "https://chronark.com",
-		siteName: "chronark.com",
-		images: [
-			{
-				url: "https://chronark.com/og.png",
-				width: 1920,
-				height: 1080,
-			},
-		],
+			"Non Profitable Organization at Hiroshima Prefecture",
+		url: "https://volunteer-network.com",
+		siteName: "volunteer-network.com",
 		locale: "en-US",
 		type: "website",
 	},
@@ -38,7 +31,7 @@ export const metadata: Metadata = {
 		},
 	},
 	twitter: {
-		title: "Chronark",
+		title: "Volunteer Network",
 		card: "summary_large_image",
 	},
 	icons: {
