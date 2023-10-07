@@ -17,19 +17,19 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 	const ref = useRef<HTMLElement>(null);
 	const [isIntersecting, setIntersecting] = useState(true);
 
-	const links: { label: string; href: string }[] = [];
-	if (project.repository) {
-		links.push({
-			label: "GitHub",
-			href: `https://github.com/${project.repository}`,
-		});
-	}
-	if (project.url) {
-		links.push({
-			label: "Website",
-			href: project.url,
-		});
-	}
+	// const links: { label: string; href: string }[] = [];
+	// if (project.repository) {
+	// 	links.push({
+	// 		label: "GitHub",
+	// 		href: `https://github.com/${project.repository}`,
+	// 	});
+	// }
+	// if (project.url) {
+	// 	links.push({
+	// 		label: "Website",
+	// 		href: project.url,
+	// 	});
+	// }
 	useEffect(() => {
 		if (!ref.current) return;
 		const observer = new IntersectionObserver(([entry]) =>
@@ -67,7 +67,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 								views,
 							)}
 						</span>
-						<Link target="_blank" href="https://twitter.com/chronark_">
+						<Link target="_blank" href="https://twitter.com">
 							<Twitter
 								className={`w-6 h-6 duration-200 hover:font-medium ${
 									isIntersecting
@@ -76,7 +76,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 								} `}
 							/>
 						</Link>
-						<Link target="_blank" href="https://github.com/chronark">
+						<Link target="_blank" href="https://github.com/otampy3184">
 							<Github
 								className={`w-6 h-6 duration-200 hover:font-medium ${
 									isIntersecting
@@ -111,13 +111,13 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 					</div>
 
 					<div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-						<div className="grid grid-cols-1 gap-y-6 gap-x-8 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+						{/* <div className="grid grid-cols-1 gap-y-6 gap-x-8 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
 							{links.map((link) => (
 								<Link target="_blank" key={link.label} href={link.href}>
 									{link.label} <span aria-hidden="true">&rarr;</span>
 								</Link>
 							))}
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>
