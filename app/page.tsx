@@ -30,7 +30,7 @@ export default function Home() {
 					quantity={100}
 				/>
 				<div className="w-max">
-					<h1 className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-9 text-7xl text-white font-bold">Volunteer Network</h1>
+					<h1 className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-9 text-4xl text-white font-bold">Volunteer Network</h1>
 				</div>
 
 				{/* <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" /> */}
